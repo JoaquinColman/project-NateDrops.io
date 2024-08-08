@@ -16,7 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={
               <>
-                <Hero greeting="Welcome to NatheDrop" />
+                
                 <ItemListContainer greeting="Top Featured Products" />
               </>
             } />
