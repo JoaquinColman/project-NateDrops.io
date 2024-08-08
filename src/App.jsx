@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
-//import Hero from './components/Hero/Hero';
+import Hero from './components/Hero/Hero';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { CartProvider } from './CartContext';
@@ -16,7 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={
               <>
-                
+                <Hero greeting="Welcome to NatheDrop" />
                 <ItemListContainer greeting="Top Featured Products" />
               </>
             } />
