@@ -1,7 +1,7 @@
 import React from 'react';
 import './Hero.css';
 import './Animation.css';  
-import gif from '../../assets/images/Hero.gif'; 
+import gif from '../../assets/images/hero.gif'
 
 const Hero = ({  }) => {
   return (
