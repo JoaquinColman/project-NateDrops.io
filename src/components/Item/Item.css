@@ -1,0 +1,74 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+img {
+    max-width: 100%; 
+    height: auto;
+}
+
+.CardItem {
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #929292;
+    padding: 10px;
+    background-color: #ffffff;
+    transition: transform 0.5s;
+    width: 100%; 
+    box-sizing: border-box; 
+}
+
+.CardItem:hover {
+    transform: scale(1.05);
+}
+
+.Header {
+    background-color: #f4f4f4;
+    padding: 8px;
+    width: 100%;
+}
+
+.ItemHeader {
+    margin: 5px;
+    font-size: 20px;
+    color: #000000;
+    font-weight: 700;
+}
+
+.ItemImg {
+    max-width: 100%;
+    height: auto;
+}
+
+.Info {
+    margin: 5px;
+    font-size: 18px;
+    color: #000000;
+    font-weight: 700;
+}
+
+.ItemFooter {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.Option {
+    text-decoration: none;
+    color: #007BFF;
+    padding: 8px 16px;
+    border: 1px solid #007BFF;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.Option:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+

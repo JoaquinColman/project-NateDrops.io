@@ -1,0 +1,70 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.Detail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 130px;
+}
+
+.CardDetail {
+    margin: 120px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #929292;
+    padding: 20px;
+    background-color: #ffffff;
+    max-width: 500px;
+    text-align: center;
+}
+
+.CardDetail img {
+    max-width: 400px;
+}
+
+.Header {
+    background-color: #f4f4f4;
+    padding: 8px;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+.ItemHeader {
+    margin: 5px;
+    font-size: 24px;
+    color: #000000;
+    font-weight: 700;
+}
+
+.ItemImg {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+}
+
+.Info {
+    margin: 10px;
+    font-size: 18px;
+    color: #000000;
+    font-weight: 700;
+}
+
+.InfoDes {
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.ItemFooter {
+    margin-top: 20px;
+}
