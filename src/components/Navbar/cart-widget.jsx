@@ -3,7 +3,12 @@ import { FaShoppingBag } from 'react-icons/fa';
 import { CartContext } from '../../CartContext';
 
 function CartWidget() {
-    const { getTotalItems } = useContext(CartContext);
+    const { cart } = useContext(CartContext);
+
+    const getTotalItems = () => {
+        return cart.reduce((total, item) => total + item.quantity, 0);
+    };
+
     const totalItems = getTotalItems();
 
     return (
@@ -15,3 +20,4 @@ function CartWidget() {
 }
 
 export default CartWidget;
+

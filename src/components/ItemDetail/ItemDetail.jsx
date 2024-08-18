@@ -1,9 +1,25 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
+import { CartContext } from '../../CartContext';
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({ id, title, category, description, price, img, stock }) => {
-    const item = { id, title, category, description, price, img, stock };
+    const [quantityAdded, setQuantityAdded] = useState(0);
+
+    const { addItem } = useContext(CartContext);
+
+    const handleOnAdd = (quantity) => {
+        setQuantityAdded(quantity);
+
+        const item = {
+            id,
+            title,
+            price,
+        };
+
+        addItem(item, quantity);
+    };
 
     return (
         <div className='Detail'>
@@ -28,14 +44,15 @@ const ItemDetail = ({ id, title, category, description, price, img, stock }) => 
                     </p>
                 </section>
                 <footer className="ItemFooter">
-                    <ItemCount item={item} stock={stock} initial={1} />
+                    {quantityAdded > 0 ? (
+                        <Link to='/cart' className='Option'>Go to cart</Link>
+                    ) : (
+                        <ItemCount stock={stock} initial={1} onAdd={handleOnAdd} />
+                    )}
                 </footer>
             </article>
         </div>
     );
-};
+}
 
 export default ItemDetail;
-
-
-
