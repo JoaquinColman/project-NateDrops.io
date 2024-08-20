@@ -2,7 +2,7 @@ const products = [
     {    
         id: '1',
         title: 'Versace Watches DOMINUS ',
-        price: parseFloat('1.199,99'.replace(',', '.')), 
+        price: parseFloat('1.199,00'.replace(',', '.')), 
         category: 'Men Watches',
         img: 'https://img01.ztat.net/article/spp-media-p1/069a3c1b581e4fd8aaf6f5e28343d18a/48d4238c02ac4ff196f44f0782928837.jpg?imwidth=762&filter=packshot',
         stock: 3,
@@ -38,7 +38,7 @@ const products = [
     {
         id: '5',
         title: 'LEXINGTON - Watch',
-        price: parseFloat('179,99'.replace(',', '.')), 
+        price: parseFloat('179,00'.replace(',', '.')), 
         category: 'Woman Watches',
         img: 'https://img01.ztat.net/article/spp-media-p1/05ba0614442031549a2b0a07016b97ca/eb5b6c3b6938497ead7a6dd3fa0d784b.jpg?imwidth=1800&filter=packshot',
         stock: 8,
