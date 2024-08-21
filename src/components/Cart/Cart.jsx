@@ -21,10 +21,11 @@ const Cart = () => {
             {cart.map(p => <CartItem key={p.id} {...p} />)}
             <h3>Total: ${total}</h3>
             <button onClick={() => clearCart()} className='Button'>Empty cart</button>
-            <Link to='/checkout' className='Option'>Complete Purchase</Link>
+            <Link to='/order' className='Option'>Proceed to Checkout</Link> {/* Cambiado a /order */}
         </div>
     );
 };
 
 export default Cart;
+
 

@@ -1,20 +1,23 @@
-import React, { useContext } from 'react';
+import React from 'react';
+import { useLocation, Link } from 'react-router-dom';
+import { useContext } from 'react';
 import { CartContext } from '../../CartContext';
-import { Link } from 'react-router-dom';
 import './Checkout.css';
 
 const Checkout = () => {
-    const { cart, clearCart, total } = useContext(CartContext);
+    const { state } = useLocation();
+    const { orderId, total } = state || {}; 
+    const { cart, clearCart } = useContext(CartContext);
 
     return (
         <div className="Checkout">
             <h1>Thank you for your purchase!</h1>
+            {orderId && <h3>Your Order ID is: {orderId}</h3>}
             <h3>Your order details:</h3>
             {cart.map(item => (
                 <div key={item.id} className="CheckoutItem">
                     <div>
                         <h4>{item.title}</h4>
-                        <p><strong>Your Order ID is:</strong> {item.id}</p> 
                         <p>Quantity: {item.quantity}</p>
                         <p>Price: ${item.price}</p>
                         <p>Subtotal: ${item.price * item.quantity}</p>
@@ -28,6 +31,8 @@ const Checkout = () => {
 };
 
 export default Checkout;
+
+
 
 
 

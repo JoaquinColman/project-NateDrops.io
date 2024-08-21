@@ -7,8 +7,9 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import { CartProvider } from './CartContext';
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/Checkout';
+import OrderForm from './components/OrderForm/orderForm'; 
 import ErrorBoundary from './components/errorBoundary/errorBoundary';
-import Footer from './components/Footer/Footer'; // Importa el Footer
+import Footer from './components/Footer/Footer';
 import './App.css';
 
 function App() {
@@ -27,11 +28,12 @@ function App() {
               } />
               <Route path="/category/:categoryId" element={<ItemListContainer greeting="Top Featured Products" />} />
               <Route path="/item/:itemId" element={<ItemDetailContainer />} />
-              <Route path='/Cart' element={<Cart />} />
+              <Route path='/cart' element={<Cart />} />
+              <Route path="/order" element={<OrderForm />} /> {/* Nueva ruta para el formulario de orden */}
               <Route path="/checkout" element={<Checkout />} />
               <Route path="*" element={<h1>404 - Page Not Found</h1>} />
             </Routes>
-            <Footer /> 
+            <Footer />
           </BrowserRouter>
         </div>
       </ErrorBoundary>
@@ -40,6 +42,7 @@ function App() {
 }
 
 export default App;
+
 
 
 
