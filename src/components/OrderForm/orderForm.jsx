@@ -1,8 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { CartContext } from '../../CartContext';
-import './OrderForm.css';
-
+import './orderForm.css';
 const OrderForm = () => {
     const { cart, total, clearCart } = useContext(CartContext);
     const [name, setName] = useState('');
