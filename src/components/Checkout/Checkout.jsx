@@ -14,6 +14,7 @@ const Checkout = () => {
                 <div key={item.id} className="CheckoutItem">
                     <div>
                         <h4>{item.title}</h4>
+                        <p><strong>Your Order ID is:</strong> {item.id}</p> 
                         <p>Quantity: {item.quantity}</p>
                         <p>Price: ${item.price}</p>
                         <p>Subtotal: ${item.price * item.quantity}</p>
@@ -27,5 +28,6 @@ const Checkout = () => {
 };
 
 export default Checkout;
+
 
 
