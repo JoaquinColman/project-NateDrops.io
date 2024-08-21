@@ -29,7 +29,7 @@ function App() {
               <Route path="/category/:categoryId" element={<ItemListContainer greeting="Top Featured Products" />} />
               <Route path="/item/:itemId" element={<ItemDetailContainer />} />
               <Route path='/cart' element={<Cart />} />
-              <Route path="/order" element={<OrderForm />} /> {/* Nueva ruta para el formulario de orden */}
+              <Route path="/order" element={<OrderForm />} /> 
               <Route path="/checkout" element={<Checkout />} />
               <Route path="*" element={<h1>404 - Page Not Found</h1>} />
             </Routes>

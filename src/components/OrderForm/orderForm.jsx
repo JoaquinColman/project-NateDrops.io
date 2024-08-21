@@ -20,18 +20,18 @@ const OrderForm = () => {
                 address,
             },
             items: cart,
-            total: total, // Aquí pasamos el total
+            total: total, 
         };
 
-        // Simular la generación de un ID de orden
+        
         const orderId = 'ORD-' + Math.floor(Math.random() * 1000000);
 
-        // Aquí puedes guardar la orden en tu base de datos si es necesario
+        
 
-        // Limpiar el carrito después de la orden
+       
         clearCart();
 
-        // Redirigir al checkout con la ID de la orden y el total
+        
         navigate('/checkout', { state: { orderId, total } });
     };
 
